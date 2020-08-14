@@ -1,0 +1,31 @@
+body, html{
+    height: 100%;
+}
+
+.form-control{
+
+    margin-bottom: 15px;
+
+}
+
+#central{
+color: orangered;
+font-size: 20px;
+}
+
+#relatorios{
+color: blue;
+font-size: 15px;
+}
+
+
+#msgErro{
+color: red;
+font-size: 13px;
+}
+
+#logo{
+    height: 80px;
+    width: 80px; 
+}
+

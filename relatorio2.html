@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/relatorio.css">
+    <link rel="stylesheet" href="/css/estilo02.css">
+
+    <script src="/js/relatorio.js"></script>
+    <link href="/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/tabulator.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.5/jspdf.plugin.autotable.js"></script>
+
+</head>
+
+<body onload="validaLogin()">
+
+    <br>
+
+
+    <div class="container h-100 d-flex" id="container1">
+        <div class="row w-100 align-items-center">
+            <div class="col">
+
+                <div class="jumbotron">
+
+                    <!-- linha do logo -->
+                    <div class="row justify-content-center">
+                        <img id="logo" src="/itau.png" alt="">
+                    </div>
+
+                    <!-- linha do texto -->
+                    <div class="row justify-content-center" style="margin: 20px;">
+                        <p id="relatorios" class="text-center">Consultas e Relatórios<p>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <!-- Coluna vazia do lado esquerdp -->
+                    
+                        <!-- <div class="col"></div> -->
+
+                        <div class="col-auto">
+                           
+
+
+                            <div class="row justify-content-between">
+                                <div class=" col-auto">
+                                    <div class="card">
+
+                                        <div class="card-body">
+                                            <div class="container h-100">
+
+                                                <div class="row justify-content-center">
+
+                                                    <div class="col-12 align-self-center">
+                                                        <div id="foto">
+                                                            <div class="media">
+                                                                <div id="imgUser"></div>
+                                                                <h5 class="mt-0">
+                                                                    
+                                                                
+                                                                    <p id="user"></p>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="card" id="campo_relatorio">
+                                                            <div class="card-header">
+                                                                Selecione seu relatório
+                                                            </div>
+                                                            <div class="card-body">
+
+                                                                <div class="row">
+                                                                    <div class="col-10">
+                                                                        <div class="row align-items-center" id="linha">
+                                                                            <input type="checkbox" name="check_ag"
+                                                                                id="check_ag">Agência
+                                                                            <select id="sel_agencias">
+                                                                                
+                                                                            </select>
+                                                                        </div>
+                                                                        <br>
+                                                                        <div class="row align-items-center" id="linha">
+                                                                            <input type="checkbox" name="check_data"
+                                                                                id="check_data">Data
+                                                                            <input type="date"
+                                                                                id="dataAgendamento"></input>
+                                                                        </div>
+                                                                        <br>
+                                                                        <div class="row align-items-center" id="linha">
+                                                                            <input type="checkbox" name="check_cliente"
+                                                                                id="check_cliente">Cliente
+                                                                            <input type="text" id="cliente"></input>
+                                                                            </select>
+                                                                        </div>
+                                                                        <br>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row justify-content-center">
+                                                                    <button type="submit" class="btn btn-warning"
+                                                                        onclick="coletarAgendamento()"><b>Gerar</b>
+                                                                    </button>
+
+
+
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="card" id="campo_relatorio">
+                                                            <div class="card-header">
+                                                                Tabela
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <button class="btn btn-secondary btn-sm" id="download-pdf" onclick="CriaPDF()" hidden>Download
+                                                                    PDF</button>
+                                                                <div id="tabela_relatorio"></div>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- <div class="col"></div> -->
+
+                                            </div>
+
+                                            <div class="row"></div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row justify-content-center"
+                                    id="coluna_logout">
+                                    <button class="btn btn-dark"
+                                        onclick="logout()">Logout</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>

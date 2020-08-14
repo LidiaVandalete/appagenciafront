@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/login.js"></script>
+
+</head>
+<body>
+<br><br>
+
+    <div class="container h-100 d-flex"> <!--Ocupar toda a pagina h-100 e centralizar d-flex-->
+        <div class="row w-100 align-items-center"> <!-- ocupa toda a largura (w-100) centralidando o conteúdo (align)-->
+            <div class="col-8 mx-auto"> <!-- uma unica coluna ocupando 8 das 12 divisoes da tela, cetralizada-->
+
+                <div class="jumbotron">
+                    <!-- dividir os jumbo em duas partes -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-danger" id="msgErro" role="alert" hidden>
+                              </div>
+                        </div>
+                    </div>
+
+                    <!-- segunda parte, form -->
+                    <form>
+                        <input class="form-control" type="text" id="txtUsuario" placeholder="E-mail ou RACF">
+                        <input class="form-control" type="password"  id="txtSenha" placeholder="Senha">
+                        <div class="col text-center">
+                            <button class="btn btn-outline-primary" onclick="autenticar(event)">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    
+    
+</body>
+
+
+</html>

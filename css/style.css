@@ -1,0 +1,7 @@
+body,html{
+    height: 100%; /*ocupa 100% do espaco com o body*/
+}
+
+.form-control{
+    margin-bottom: 10px;
+}

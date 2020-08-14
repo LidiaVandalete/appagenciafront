@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+<br><br>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <!-- //lado esquerdo -->
+          </div>
+          <div class="col-sm">
+           
+            <div class="jumbotron" style="margin-bottom: 0px; padding: 16px;">
+                <div class="row justify-content-center">
+                    <img src="itau.png" width="20%" alt="">
+                </div>
+                <p class="text-center">Ambiente de gestão<br><em>Agendamento Agências</em></p>
+                <div class="col">
+                    <div class="alert alert-danger" id="msgErro" role="alert" hidden>
+                      </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email ou RACF</label>
+                      <input type="text" class="form-control" id="txtUsuario" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">Digite apenas o e-mail ou o RACF.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Senha</label>
+                      <input type="password" class="form-control" id="txtSenha">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Mantenha-me logado</label>
+                    </div> 
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-outline-primary" onclick="autenticar(event)">Acessar</button>
+                    </div>
+                  </form>
+                  <div class="row justify-content-center">
+                    <img src="logo_javangers-2.png" width="50%" style="border-radius: 11px; margin: 10px;" alt="">
+                </div>
+                
+
+              </div>
+
+
+          </div>
+          <div class="col-sm">
+            <!-- lado direito -->
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+</body>
+
+<script src="./js/login.js"></script>
+</html>

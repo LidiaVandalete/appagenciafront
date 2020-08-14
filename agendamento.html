@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.5/jspdf.plugin.autotable.js"></script>
+
+  <link rel="stylesheet" href="/css/estilo03.css">
+
+  <script src="/js/agendamento.js"></script>
+
+</head>
+
+<body>
+  <br>
+  <div class="container h-100 d-flex">
+    <div class="row w-100 align-items-center">
+      <div class="col-6 mx-auto">
+
+        <div class="jumbotron"> 
+
+          <div class="row justify-content-end">
+            <a href="index.html"><button type="submit" class="btn btn-light"><b>Area Restrita</b></button></a>
+          </div>
+
+
+          <div class="row justify-content-center">
+            <img id="logo" src="/itau.png" style="height: 80px;" alt="">
+          </div>
+
+          <br>
+          <p id="central" class="text-center"><b>Central de Agendamentos</b><br><em id="agendamento">
+              Novo Agendamento</em></p>
+
+          <form>
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" class="form-control" name="nome" id="nome" placeholder="Preencha com o seu nome">
+            </div>
+            <div class="form-group">
+              <label>E-mail</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+              <label>Telefone/Celular</label>
+              <input type="tel" class="form-control" name="cel" id="cel" placeholder="(xx) xxxx-xxxx">
+            </div>
+
+            <div class="form-group">
+              <label>Selecione a agência</label>
+              <select id="sel_agencias" name="agencia"></select>
+            </div>
+
+            <div class="form-group">
+              <label>Data</label>
+              <input type="date" id="data" name="data">
+            </div>
+
+            <div class="form-group">
+              <label>Horário</label>
+              <input type="time" id="hora" name="hora">
+            </div>
+
+            <div class="form-group">
+              <label>Observação</label>
+              <input type="text" class="form-control" name="obs" id="obs">
+            </div>
+            <!-- Alerta se der certo o input de dados -->
+            <div class="alert alert-success" role="alert" id="ok" hidden>
+              Dados cadastrados com sucesso.
+            </div>
+            <!-- Alerta se der errado o input de dados -->
+            <div class="alert alert-danger" role="alert" id="nok" hidden>
+              Ocorreu alguma falha na gravação de dados.
+            </div>
+
+            <div class="row justify-content-center">
+
+              <button type="submit" class="btn btn-warning" onclick="getInformacoes(event)"><b>Agendar</b></button>
+            </div>
+            <div class="row justify-content-center">
+              <img src="logo_javangers-2.png" width="30%" style="border-radius: 11px; margin: 10px;" alt="">
+          </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

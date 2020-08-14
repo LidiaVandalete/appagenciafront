@@ -1,0 +1,17 @@
+img{
+    height: 80px;
+    width: 75px;
+}
+
+#linha{
+    padding-bottom: 10px;
+}
+
+#campo_relatorio{
+    margin-top: 20px;
+}
+
+.dataAgendamento {
+    width: 20px;
+    border-color: brown;
+}
